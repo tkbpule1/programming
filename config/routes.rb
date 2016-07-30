@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  root 'pages#home'
+
+  get '/linux' => 'pages#linux'
+
+  get '/rails' => 'pages#rails'
+
+  get '/ruby' => 'pages#ruby'
+
+  get '/c' => 'pages#c'
+
+  get '/git' => 'pages#git'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
