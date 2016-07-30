@@ -1,3 +1,221 @@
 <% provide(:title, 'Rails') %>
-<h1>Pages#rails</h1>
-<p>Find me in app/views/pages/rails.html.erb</p>
+
+<h1>Rails</h1>
+
+<h2>To create a new app, in the terminal:</h2>
+
+<div class="code">
+  <p>
+    <span class="prompt">$ </span>rails new sample_app<br>
+    <span class="prompt">$ </span>cd sample_app
+  </p>
+</div>
+
+<h2>Gemfile:</h2>
+
+<div class="code">
+  source 'https://rubygems.org'<br>
+
+  <span class="gem">gem</span> <span class="quote">'bootstrap-sass',
+     '3.2.0.0'</span><br>
+  <span class="gem">gem</span> <span class="quote">'faker', '1.4.2'</span><br>
+  <span class="gem">gem</span> <span class="quote">'carrierwave',
+     '0.10.0'</span><br>
+  <span class="gem">gem</span> <span class="quote">'mini_magick',
+     '3.8.0'</span><br>
+  <span class="gem">gem</span> <span class="quote">'fog', '1.36.0'</span><br>
+  <span class="gem">gem</span> <span class="quote">'will_paginate',
+     '3.0.7'</span><br>
+  <span class="gem">gem</span> <span class="quote">'bootstrap-will_paginate',
+     '0.0.10'</span><br>
+  <span class="comment"> Bundle edge Rails instead: gem 'rails', github:
+     'rails/rails'</span><br>
+  <span class="gem">gem</span> <span class="quote">'rails', '4.2.6'</span><br>
+  <span class="comment"> Use sqlite3 as the database for Active
+     Record</span><br>
+  <span class="gem">gem</span> <span class="quote">'sqlite3'</span><br>
+  <span class="comment"> Use SCSS for stylesheets</span><br>
+  <span class="gem">gem</span> <span class="quote">'sass-rails', '~>
+     5.0'</span><br>
+  <span class="comment"> Use Uglifier as compressor for JavaScript
+     assets</span><br>
+  <span class="gem">gem</span> <span class="quote">'uglifier', '>=
+     1.3.0'</span><br>
+  <span class="comment"> Use CoffeeScript for .coffee assets and
+     views</span><br>
+  <span class="gem">gem</span> <span class="quote">'coffee-rails', '~>
+     4.1.0'</span><br>
+  <span class="comment"> See https://github.com/rails/execjs#readme for more
+     supported runtimes</span><br>
+  <span class="comment"># gem 'therubyracer', platforms: :ruby</span><br>
+
+  <span class="comment"># Use jquery as the JavaScript library<br></span>
+  <span class="gem">gem</span> <span class="quote">'jquery-rails'<br></span>
+  <span class="comment"># Turbolinks makes following links in your web
+     application faster. <br># Read more:
+      https://github.com/rails/turbolinks<br></span>
+  <span class="gem">gem</span> <span class="quote">'turbolinks'<br></span>
+  <span class="comment"># Build JSON APIs with ease. Read more:
+     https://github.com/rails/jbuilder<br></span>
+  <span class="gem">gem</span> <span class="quote">'jbuilder', '~>
+     2.0'<br></span>
+  <span class="comment"># bundle exec rake doc:rails generates the API under
+     doc/api.<br></span>
+  <span class="gem">gem</span> <span class="quote">'sdoc', '~> 0.4.0', group:
+     :doc<br></span>
+<br>
+  <span class="comment"># Use ActiveModel has_secure_password<br></span>
+  <span class="gem">gem</span> <span class="quote">'bcrypt', '~>3.1.7'<br>
+<br></span>
+  <span class="gem">gem</span> <span class="quote">'listen', '3.1.0'<br>
+<br></span>
+  <span class="comment"># Use Unicorn as the app server<br></span>
+  <span class="comment"># gem 'unicorn'<br></span>
+<br>
+  <span class="comment"># Use Capistrano for deployment<br></span>
+  <span class="comment"># gem 'capistrano-rails', group:
+     :development<br></span>
+<br>
+  group :development, :test do<br>
+    <span class="comment"># Call 'byebug' anywhere in the code to stop
+       execution and get a debugger console<br></span>
+    <span class="gem">gem</span> <span class="quote">'byebug'<br></span>
+<br>
+    <span class="comment"># Access an IRB console on exception pages or by
+       using <%= console %> in views<br></span>
+    <span class="gem">gem</span> <span class="quote">'web-console', '~>
+       2.0'<br></span>
+<br>
+    <span class="comment"># Spring speeds up development by keeping your
+       application running in the background. Read more:
+        https://github.com/rails/spring<br></span>
+    <span class="gem">gem</span> <span class="quote">'spring'<br></span>
+  end<br>
+<br>
+  group :test do<br>
+    <span class="gem">gem</span> <span class="quote">'minitest-reporters',
+       '1.0.5'<br></span>
+    <span class="gem">gem</span> <span class="quote">'mini_backtrace',
+       '0.1.3'<br></span>
+    <span class="gem">gem</span> <span class="quote">'guard-minitest',
+       '2.3.1'<br></span>
+  end<br>
+<br>
+  group :production do<br>
+    <span class="gem">gem</span> <span class="quote">'rails_12factor',
+       '0.0.2'<br></span>
+    <span class="gem">gem</span> <span class="quote">'puma', '3.1.0'<br>
+  end<br></span>
+</div>
+
+
+<h2>Install Gems:</h2>
+<div class="code">
+  <span class="prompt">$ </span>bundle install --without production
+</div>
+
+<h2>Initialize the GIT repository:</h2>
+<div class="code">
+  <span class="prompt">$</span> git init
+</div>
+
+<h2>Modify .gitignore:</h2>
+<div class="code">
+  *.rbc<br>
+  capybara-*.html<br>
+  .rspec<br>
+  /log<br>
+  /tmp<br>
+  /db/*.sqlite3<br>
+  /db/*.sqlite3-journal<br>
+  /public/system<br>
+  /coverage/<br>
+  /spec/tmp<br>
+  **.orig<br>
+  rerun.txt<br>
+  pickle-email-*.html<br>
+
+  # TODO Comment out these rules if you are OK with secrets being uploaded to
+   the repo<br>
+  config/initializers/secret_token.rb<br>
+  config/secrets.yml<br>
+<br>
+  # dotenv<br>
+  # TODO Comment out this rule if environment variables can be committed<br>
+  .env<br>
+<br>
+  ## Environment normalization:<br>
+  /.bundle<br>
+  /vendor/bundle<br>
+<br>
+  # these should all be checked in to normalize the environment:<br>
+  # Gemfile.lock, .ruby-version, .ruby-gemset<br>
+<br>
+  # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:<br>
+  .rvmrc<br>
+<br>
+  # if using bower-rails ignore default bower_components path bower.json
+   files<br>
+  /vendor/assets/bower_components<br>
+  *.bowerrc<br>
+  bower.json<br>
+<br>
+  # Ignore pow environment settings<br>
+  .powenv<br>
+<br>
+  # Ignore Byebug command history file.<br>
+  .byebug_history<br>
+</div>
+
+<h2>Add and commit files to GIT</h2>
+<div class="code">
+  <span class="prompt">$</span> git add .<br>
+  <span class="prompt">$</span> git commit -am "Initialize Repository"
+</div>
+
+<h2>Modify README.rdoc:</h2>
+<div class="code">
+  <span class="prompt">$ </span>mv README.rdoc README.md
+</div>
+<br>
+<p>
+  Fill in the README.md:
+</p>
+<div class="code">
+  ## Getting started<br>
+<br>
+To get started with the app, clone the repo and then install the needed gems:<br>
+<br>
+```<br>
+$ bundle install --without production<br>
+```<br>
+<br>
+Next, migrate the database:<br>
+<br>
+```<br>
+$ bundle exec rake db:migrate<br>
+```<br>
+<br>
+Finally, run the test suite to verify that everything is working correctly:<br>
+<br>
+```<br>
+$ bundle exec rake test<br>
+```<br>
+<br>
+If the test suite passes, you'll be ready to run the app in a local server:<br>
+<br>
+```<br>
+$ rails server<br>
+```<br>
+</div>
+
+<h2>Commit the changes</h2>
+<div class="code">
+  <span class="prompt">$ </span>git commit -am "Improve the README"
+</div>
+
+<h2>Add a remote repository(BitBucket/Github)</h2>
+<div class="code">
+  <span class="prompt">$ </span>git remote add origin git@github.com/username/sample_app.git<br>
+  <span class="prompt">$ </span>git push origin master
+</div>

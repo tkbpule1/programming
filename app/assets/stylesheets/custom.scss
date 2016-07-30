@@ -55,11 +55,10 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.8em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   font-weight: normal;
-  color: $gray-medium-light;
 }
 
 p {
@@ -86,4 +85,29 @@ p {
 
 .navbar {
   color: white !important;
+}
+
+.code {
+  color: black !important;
+  background: $gray-medium-light;
+  border: solid 1px black;
+  text-align: left;
+  padding: 10px 10px 10px 10px;
+  font-weight: bold;
+}
+
+.prompt {
+  color: blue !important;
+}
+
+.comment {
+  color: gray;
+}
+
+.gem {
+  color: blue;
+}
+
+.quote {
+  color: green;
 }
